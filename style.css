@@ -1,4 +1,68 @@
-.text-block{
-    background-color: rgb(23, 68, 153);
-    
+body{
+    background-color: rgb(240, 240, 255);
+} 
+form, .card{
+     padding: 48px 48px 48px 48px;
+     margin: auto;
+     width: 480px;
+     background-color: white;
+     box-shadow: 0px 10px 30px rgba(235, 219, 255, 0.39);
+ }
+ .TitleAndText{
+     margin: 16px 0px;
+ }
+ h1 {
+     font-family: Poppins, sans-serif;
+     font-size: 32px;
+     font-weight: 700;
+     text-align: center;
+     margin: 0;
+ }
+ p{
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+ }
+ placeholder{
+     font-family: Poppins, sans-serif;
+     font-size: 16px;
+ }
+ input {
+
+     padding-left: 16px;
+     margin-bottom: 8px;
+     height: 48px;
+     width: 100%;
+     font-family: Poppins;
+     font-size: 16px;
+     border: 1px solid rgb(227, 223, 255);
+ }
+ input:hover{
+     border: 1px solid rgb(212, 208, 243);
+ }
+ label{
+     margin-bottom: 16px;
+     font-family: Poppins;
+     font-size: 14px;
+ }
+ .remember{
+     text-align: right;
+     width: 16px;
+     border-radius: 30px;
+     border: 1px solid rgb(227, 223, 255);
+ }
+.centerAlign input, .centerAlign label{
+    vertical-align: middle;
+}
+button{
+    font-family: Poppins;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 16px;
+    margin-top: 16px;
+    padding: 8px;
+    height: 56px;
+    width: 100%;
 }
