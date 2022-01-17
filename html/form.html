@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <style>
+        :root{
+            --grayscale100: rgba(17, 12, 26, 1);
+            --grayscale80: rgba(44, 48, 51, 1);
+            --grayscale40: rgba(148, 145, 153, 1);
+            --grayscale20: rgba(200, 198, 204, 1);
+            --grayscale10: rgba(227, 227, 229, 1);
+            --grayscale05: rgba(240, 241, 242, 1);
+            --grayscale02: rgba(248, 247, 250, 1);
+            --grayscale00: rgb(255, 255, 255);
+
+            --primaryDefault: rgba(238, 0, 69, 1);
+
+            --fontFamily: SF Pro Display;
+        }
+        *{
+            font-family: var(--fontFamily);
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding:16px 60px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .navigation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: none;
+            flex-grow: 1;
+            margin: 0;
+            width: auto;
+        }
+        .tab{
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+            padding: 0 24px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+        .tab > a{
+            text-decoration: none;
+            color: var(--grayscale40);
+        }
+        .tab > a :hover{
+            color: var(--grayscale80);
+        }
+        .primary{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 48px;
+            margin: 0;
+            height: 48px;
+            background: var(--primaryDefault);
+            border-radius: 32px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            color: var(--grayscale00);
+        }
+        .article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px, 60px;
+            margin: 80px 0 0;
+            flex-grow: 1;
+        }
+        .TitleAndText{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            align-self: stretch;
+            margin: 0 0 80px;
+        }
+        .TitleAndText > .title80{
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 80px;
+            text-align: center;
+            color: var(--grayscale100);
+            margin: 0 0 16px 0;
+        }
+        .TitleAndText > .text20{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: center;
+            color: var(--grayscale40);
+            margin: 0;
+        }
+        .form{
+            background: var(--grayscale02);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 868px;
+            padding: 64px;
+            margin: 0;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 0 32px;
+        }
+        .label{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            margin: 0 0 24px;
+            width: 424px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+        .input, .textarea{
+            width: 424px;
+            border: 1px solid var(--grayscale10);
+            box-sizing: border-box;
+            border-radius: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            background: var(--grayscale00);
+        }
+        ::placeholder{
+            color: var(--grayscale20);
+        }
+        .input{
+            height: 56px;
+            padding: 18px 12px;
+        }
+        .textarea{
+            height: 120px;
+            padding: 16px 12px;
+            align-content: flex-start;
+            color: var(--grayscale20);
+            resize: none;
+        }
+        .ButtonAndCaption{
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="/assets/Logo.svg" alt="logo">
+        <nav class="navigation">
+            <ul> 
+                <li class="tab"><a href="/">Home</a></li>
+                <li class="tab"><a href="/">FAQs</a></li>
+                <li class="tab"><a href="/">Contact us</a></li>
+                <li class="tab"><a href="/">We remember you</a></li>
+            </ul>
+        </nav>
+        <button class="primary">Dowload</button>
+    </header>
+    <article class="article">
+        <div class="TitleAndText">
+            <h1 class="title80">Contact us</h1>
+            <p class="text20">We’d love to hear from you. Please fill out this form.</p>
+        </div>
+        <form class="form" action="/formData.txt">
+            <div class="inputs">
+                <label class="label">
+                    Name
+                    <input class="input" type="text" placeholder="Enter your name" required>
+                </label>
+                <label class="label">
+                    Email
+                    <input class="input" type="text" placeholder="Enter your email" required>
+                </label>
+                <label class="label">
+                    Message
+                    <textarea class="textarea" rows="5" required>Enter your message</textarea>
+                </label>
+            </div>
+            <div class=ButtonAndCaption>
+                <button class="primary">Send message</button>
+                <p class="caption">By sending this message, you agree to our <b><a href="/">Privacy Policy</a></b></p>
+            </div>
+        </form>
+    </article>
+    <footer class="footer">
+        <div class="LogoAndCaption">
+            <img class="logo" src="/assets/Logo.svg" alt="logo">
+            <p>© 2022 All rights reserved.</p>
+        </div>
+        <nav class="navigation">
+            <ul> 
+                <li class="tab">Home</li>
+                <li class="tab">FAQs</li>
+                <li class="tab">Contact us</li>
+                <li class="tab">We remember you</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
